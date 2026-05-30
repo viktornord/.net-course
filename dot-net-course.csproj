@@ -8,4 +8,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- GUI tasks are separate projects; do not compile their folders into this app. -->
+  <ItemGroup>
+    <Compile Remove="Task5/**" />
+  </ItemGroup>
+
 </Project>

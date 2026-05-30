@@ -17,9 +17,6 @@ switch (args[0].ToLowerInvariant())
     case "3":
         Task3.Run();
         break;
-    case "4":
-        Task4.Run();
-        break;
     default:
         Console.WriteLine($"Unknown task: {args[0]}");
         PrintUsage();
@@ -32,5 +29,5 @@ static void PrintUsage()
     Console.WriteLine("  dotnet run -- 1   # acronyms, types, ranges, defaults");
     Console.WriteLine("  dotnet run -- 2   # pi and e (decimal precision)");
     Console.WriteLine("  dotnet run -- 3   # string escape sequences");
-    Console.WriteLine("  dotnet run -- 4   # Microsoft Learn resource links");
+    Console.WriteLine("  dotnet run --project Task5   # same GUI, Task5 project only");
 }
