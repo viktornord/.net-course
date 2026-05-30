@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Task4.MainWindow"
+        Title="Task 4 — Calculator"
+        Width="420"
+        Height="520"
+        WindowStartupLocation="CenterScreen">
+  <StackPanel Margin="20" Spacing="12">
+    <TextBlock Text="Value 1 (textBox1)" />
+    <TextBox x:Name="textBox1" Watermark="First value" />
+
+    <TextBlock Text="Value 2 (textBox2)" Margin="0,4,0,0" />
+    <TextBox x:Name="textBox2" Watermark="Second value" />
+
+    <TextBlock Text="Operation" FontWeight="SemiBold" Margin="0,8,0,0" />
+    <StackPanel Spacing="6">
+      <RadioButton x:Name="radioButtonRemainder"
+                   GroupName="Operation"
+                   Content="Remainder of division (%)"
+                   IsChecked="True" />
+      <RadioButton x:Name="radioButtonExponentiation"
+                   GroupName="Operation"
+                   Content="Exponentiation (^)" />
+      <RadioButton x:Name="radioButtonConcatenation"
+                   GroupName="Operation"
+                   Content="Concatenation (+)" />
+      <RadioButton x:Name="radioButtonDivision"
+                   GroupName="Operation"
+                   Content="Division (/)" />
+    </StackPanel>
+
+    <Button x:Name="buttonCalculate"
+            Content="Calculate"
+            HorizontalAlignment="Stretch"
+            Margin="0,8,0,0"
+            Click="ButtonCalculate_Click" />
+
+    <TextBlock Text="Result (textBox3)" Margin="0,4,0,0" />
+    <TextBox x:Name="textBox3"
+             IsReadOnly="True"
+             Watermark="Result appears here" />
+  </StackPanel>
+</Window>
